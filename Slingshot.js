@@ -19,6 +19,11 @@ class SlingShot{
         this.sling.bodyA = null;
     }
 
+    attach(body){
+        this.sling.bodyA=body
+
+    }
+
     display(){
         image(this.sling1,200,20)
         image(this.sling2,170,20)
@@ -26,6 +31,7 @@ class SlingShot{
             var pointA = this.sling.bodyA.position;
             var pointB = this.pointB;
             strokeWeight(4);
+            stroke(48,22,8)
             if(pointA.x<220){
                 line(pointA.x-25, pointA.y, pointB.x-10, pointB.y);
                 line (pointA.x-25,pointA.y,pointB.x+25,pointB.y)
